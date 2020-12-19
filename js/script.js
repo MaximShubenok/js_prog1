@@ -34,4 +34,16 @@ for (let i = 0; i < 2; i++) {
 
 }
 
+if (numberOfFilms < 10) {
+    alert('Просмотрено довольно мало фильмов');
+} else if (numberOfFilms >= 10 && numberOfFilms <= 30) {
+    alert('Вы классический зритель');
+} else if (numberOfFilms > 30){
+    alert('Вы киноман');
+} else {
+    alert('Произошла ошибка');
+}
+
 console.log(personalMovieDB);
+
+// Ну тут типо нужно переписать цикл ещё двумя способами, но этот тоже не плохо работает)
