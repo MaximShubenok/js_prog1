@@ -14,6 +14,8 @@ function start() {
 start();
 // НЕ ЗАБЫВАТЬ ВЫЗЫВАТЬ ФУНКЦИЮ!!!
 
+// Обработка ошибок
+
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
@@ -52,7 +54,9 @@ function rememberMyFilms() {
     }
 }
 
-rememberMyFilms();
+// rememberMyFilms();
+
+// Обработка ошибок 
 
 
 
@@ -68,19 +72,12 @@ function detectPersonalLevel() {
     }
 }
 
-detectPersonalLevel();
+// detectPersonalLevel();
+
+// Классификация зрителя
 
 
 // Ну тут типо нужно переписать цикл ещё двумя способами, но этот тоже не плохо работает)
-
-
-// function showMyDB() {
-//     if (personalMovieDB.privat == false) {
-//         console.log(personalMovieDB);
-//     }
-// }
-
-// showMyDB();
 
 function  showMyDB(hidden) {
     if (!hidden) {
@@ -89,3 +86,17 @@ function  showMyDB(hidden) {
 }
 
 showMyDB(personalMovieDB.privat);
+
+// Приватынй показ базы данных
+
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genres[i - 1] = genre;
+    }
+}
+
+writeYourGenres();
+
+// добовляем жанр в массив
